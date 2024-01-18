@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+    <div class="container">
+        <form [formGroup]="note" class="loginForm"  class="card" id="main-card">
+            <input type="text" name="title" placeholder="Title" class="text-inputs" id="input-title" formControlName="title">
+            <input type="text" name="text" placeholder="Take a note.." class="text-inputs" id="input-feild" formControlName='description'>
+            <div class="icons">
+                <a href="" disabled><i class="material-icons">person_add</i></a>
+                <a href=""><i class="material-icons">color_lens</i></a>
+                <div class="colors" id="color-change">
+                    <div class="col" style="background-color:#ffffff"></div>
+                    <div class="col" style="background-color:#ad7cdb"></div>
+                    <div class="col" style="background-color:#d65b5b"></div>    
+                    <div class="col" style="background-color:#e0af55"></div>
+                    <div class="col" style="background-color:#f3f30a"></div>
+                    <div class="col" style="background-color:#d45bc4"></div>
+                </div>
+                <a href=""><i class="material-icons">image</i></a>
+                <a href=""><i class="material-icons">archive</i></a>
+                <a href=""><i class="material-icons">clear</i></a>
+                <a href=""><i class="material-icons">undo</i></a>
+                <a href=""><i class="material-icons">redo</i></a>
+                <button id="save_note" (click)="noteHandler()">{{noteBtn}}</button>
+            </div>
+        </form>
+    </div>
+    <div class="note-container">
+        <app-notecontainer [userNotes] = "userNotes" (del)="delNote($event)" (edit)="editNote($event)"></app-notecontainer>
+    </div> 
+
+
+

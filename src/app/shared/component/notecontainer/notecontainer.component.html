@@ -1,0 +1,12 @@
+<div class="noteContainer">
+    <ng-container *ngFor="let note of userNotes; index as i">
+        <div class='notes-content'>
+            <h4 class='note-title'>{{note.title}}</h4>
+            <p>{{note.description}}</p>
+            <div class="btnContainer">
+                <button (click)="delete(i)" class="delBtn"> <i class="material-icons"></i><i class='material-icons'>delete</i> </button>
+                <button (click)="editNote(i)" class="delBtn" class="editBtn"> <i class="material-icons"></i><i class='material-icons'>edit</i> </button>
+            </div>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,31 @@
+<form [formGroup]="signUp" class="signUp" (ngSubmit)= "signupUser()">
+    <h1>SignUp Form</h1>
+    <mat-form-field class="name">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName = 'name'>
+      </mat-form-field>
+
+      <mat-form-field class="userName">
+        <mat-label>Username</mat-label>
+        <input matInput type="text" formControlName = 'username'>
+      </mat-form-field>
+      
+      <mat-form-field class="passWord">
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      
+      <button mat-raised-button color="accent" type="submit">Sign Up</button>   
+      <p>Don't have an Account <a routerLink="/login"> Login</a> </p>   
+    </form>     
+<!-- 
+    <form [formGroup]="signUp">
+      <input type="text" placeholder="username" formControlName="email" />
+      <ng-container *ngFor="let control of newControls">
+        <input type="{{control.type}}" placeholder="{{control.placeholder}}" formControlName="{{control.formControlName}}">
+      </ng-container>
+    <button type="button" (click)="next()">Next</button>
+  </form> -->

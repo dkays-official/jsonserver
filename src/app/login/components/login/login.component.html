@@ -1,0 +1,23 @@
+  <form [formGroup]="loginForm" class="loginForm">
+    <h1>Login Form</h1>
+  <app-input  [placeholder]="'Username'" [type]="'text'" [formGroup]="loginForm" [control]="'username'"></app-input>
+  <app-input [placeholder]="'Password'" [type]="'password'" [formGroup]="loginForm" [control]="'password'"></app-input>
+  <button (click)="login()">Login</button>
+  <p>Don't have an Account <a routerLink="/signup"> Sign Up</a> </p>  
+  </form>
+<!-- <form [formGroup]="loginForm" class="loginForm">
+  <h1>Login Form</h1>
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput type="text" formControlName = 'username'>
+    </mat-form-field>  
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="login()">Login</button>  
+    <p>Don't have an Account <a routerLink="/signup"> Sign Up</a> </p>  
+  </form>  -->

@@ -1,0 +1,68 @@
+/* 
+.delBtn{
+  border: none;
+  background: white;
+  cursor: pointer;
+  color: #ff0000;
+}
+.editBtn{
+  border: none;
+  background: white;
+  cursor: pointer;
+  color: #0000ff;
+}
+
+.note-container {
+  text-align: center;
+  width: auto;
+  overflow: hidden;
+}
+.note-container .notes {
+  display: auto;
+  flex-wrap: wrap;
+  margin: 10px;
+  padding: 10px;
+}
+.note-container .notes-content {
+  text-align: left;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 2rem;
+  position: relative;
+  width: 20%;
+  padding: 5px 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  color: #636363;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+.note-container .notes-content a {
+  text-decoration: none;
+  color: black;
+} */
+
+.notes-content{
+  display: inline-block;
+  padding: 20px;
+  width: 300px;  
+  margin-bottom: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.noteContainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.delBtn{
+  border: none;
+  background: white;
+  cursor: pointer;
+  color: #ff0000;
+}
+.editBtn{
+  border: none;
+  background: white;
+  cursor: pointer;
+  color: #0000ff;
+}

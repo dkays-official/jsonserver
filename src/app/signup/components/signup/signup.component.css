@@ -1,0 +1,22 @@
+.userName {
+    margin-right: 15px;
+  }
+
+form.signUp{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 50px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+} 
+form.signUp input{
+  display: block;
+}
+form.signUp button{ 
+  height: 56px;
+}
