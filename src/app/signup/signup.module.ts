@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from '../shared/services/http.service';
 import { AppRoutingModule } from '../app-routing.module';
+import { InputComponent } from '../shared/component/input/input.component';
 
 
 

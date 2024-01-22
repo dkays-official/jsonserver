@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Form, FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
@@ -12,7 +12,7 @@ export class InputComponent implements OnInit{
   @Input() control: any;
   @Input() inputId = '';
   @Input() label = '';
-  @Input() formGroup!: FormGroup
+  @Input() formGroup!: FormGroup;
   
   ngOnInit(): void {
     this.formGroup.addControl(this.control , new FormControl(''))

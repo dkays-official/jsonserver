@@ -1,5 +1,5 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,5 +13,21 @@ export class HttpService {
   }
   getUsers(): Observable <any>{
     return this._httpService.get(this.url+"users");
+  }
+   userExists = false;
+  checkUser(username: any): boolean { 
+    this._httpService.get(this.url + "users").subscribe((data: any) => {
+      console.log(data);
+      for(let i=0; i<data.length;i++){
+        if(username === data[i].username){
+          this.userExists = true;
+          break;
+        }
+        else{
+          this.userExists= false;
+        }
+      }
+    });
+    return this.userExists;
   }
 }

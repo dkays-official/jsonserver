@@ -10,18 +10,13 @@ export class NotesService {
   constructor(private _httpService : HttpClient) { }
   url = 'http://localhost:3000/';
   createNote(note: any): Observable <any>{
-    console.log("create");    
     return this._httpService.post(this.url+"notes", note);
   }
-  getNotes(): Observable <any>{
-    console.log("get");
-    
+  getNotes(): Observable <any>{    
     return this._httpService.get(this.url+"notes");
   }
 
-  delNote(noteId:any): Observable<any> {
-    console.log("delete");
-    
+  delNote(noteId:any): Observable<any> {    
     return this._httpService.delete<any>(this.url + "notes/" + noteId);
   }
 

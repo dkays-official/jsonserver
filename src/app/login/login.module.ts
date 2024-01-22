@@ -1,13 +1,13 @@
-import { Input, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpService } from '../shared/services/http.service';
-import { MaterialModule } from '../shared/material/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './components/login/login.component';
-import { LoggedUserService } from '../shared/services/logged-user.service';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { InputComponent } from '../shared/component/input/input.component';
+import { MaterialModule } from '../shared/material/material.module';
+import { HttpService } from '../shared/services/http.service';
+import { LoggedUserService } from '../shared/services/logged-user.service';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({

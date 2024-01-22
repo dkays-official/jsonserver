@@ -7,10 +7,10 @@ import { SignupModule } from './signup/signup.module';
 import { NotesModule } from './notes/notes.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './shared/material/material.module';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { NotfoundComponent } from './shared/component/notfound/notfound.component';
-import { NotecontainerComponent } from './shared/component/notecontainer/notecontainer.component';
-
+import { httpheaderInterceptor } from './shared/services/httpheader.interceptor';
+import { errorhandlerInterceptor } from './shared/services/errorhandler.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,14 +19,14 @@ import { NotecontainerComponent } from './shared/component/notecontainer/notecon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LoginModule,
-    SignupModule, 
     ReactiveFormsModule,
     MaterialModule,
     HttpClientModule,
-    NotesModule
+    NotesModule,
+    LoginModule,
+    SignupModule
   ],
-  providers: [],
+  providers: [provideHttpClient(withInterceptors([httpheaderInterceptor, errorhandlerInterceptor]))],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

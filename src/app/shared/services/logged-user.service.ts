@@ -7,8 +7,8 @@ export class LoggedUserService {
 
   constructor() { }
 
-  setLoggedUser( loggedUser : string ){
-    window.localStorage.setItem("LoggedUser", JSON.stringify(loggedUser))
+  setLoggedUser(key: string, loggedUser : string){
+    window.localStorage.setItem(key, JSON.stringify(loggedUser))
   }
   getLoggedUser(LoggedUser: string){
     window.localStorage.getItem(LoggedUser)

@@ -2,7 +2,8 @@
     <h1>Login Form</h1>
   <app-input  [placeholder]="'Username'" [type]="'text'" [formGroup]="loginForm" [control]="'username'"></app-input>
   <app-input [placeholder]="'Password'" [type]="'password'" [formGroup]="loginForm" [control]="'password'"></app-input>
-  <button (click)="login()">Login</button>
+  <button mat-raised-button color="accent" (click)="login()">Sign Up</button>   
+      <p>Don't have an Account <a routerLink="/login"> Login</a> </p> 
   <p>Don't have an Account <a routerLink="/signup"> Sign Up</a> </p>  
   </form>
 <!-- <form [formGroup]="loginForm" class="loginForm">

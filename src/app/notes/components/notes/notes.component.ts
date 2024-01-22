@@ -1,7 +1,7 @@
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoggedUserService } from '../../../shared/services/logged-user.service';
 import { NotesService } from '../../../shared/services/notes.service';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-notes',
@@ -44,21 +44,13 @@ export class NotesComponent {
       const loggedUser = loggedUserString ? JSON.parse(loggedUserString) : null;
       this._notesService.createNote(this.note.value).subscribe((note) => {
         this.userNotes.push(note)
-        console.log(this.userNotes);
         this.note.reset()
-        // this._notesService.getNotes().subscribe((notes) => {
-        //   this.allNotes = notes;
-        //   this.userNotes = notes.filter((note: any) => note.userId === loggedUser.id);
-        //  this.userNotes.reverse();
-        // //  this.note.reset()     
-        // });
       });
     }
   }
   //Delete Note
   delNote(index: any) {
     this._notesService.delNote(this.userNotes[index]["id"]).subscribe((notes) => {
-      console.log(notes);
     });
     this.userNotes.splice(index, 1)
   }

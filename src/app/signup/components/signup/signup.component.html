@@ -1,4 +1,4 @@
-<form [formGroup]="signUp" class="signUp" (ngSubmit)= "signupUser()">
+<form [formGroup]="signUp" class="signUp">
     <h1>SignUp Form</h1>
     <mat-form-field class="name">
         <mat-label>Name</mat-label>
@@ -18,7 +18,7 @@
         </button>
       </mat-form-field>
       
-      <button mat-raised-button color="accent" type="submit">Sign Up</button>   
+      <button mat-raised-button color="accent" (click)="signupUser()">Sign Up</button>   
       <p>Don't have an Account <a routerLink="/login"> Login</a> </p>   
     </form>     
 <!-- 
