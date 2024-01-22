@@ -22,7 +22,6 @@ export class SignupComponent {
   existingUser = false;
 
   signupUser() {
-    debugger;
     let username = this.signUp.controls['username'].value;
     let condition = this._httpService.checkUser(username);
     if (!condition) {

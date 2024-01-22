@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoggedUserService } from '../../../shared/services/logged-user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +8,10 @@ import { LoggedUserService } from '../../../shared/services/logged-user.service'
 })
 export class NavbarComponent {
   constructor(
-    private _localStorage: LoggedUserService,
     private _router: Router
   ) {}
   logout() {
-    this._localStorage.removeLoggedUser();
+    localStorage.removeItem("LoggedUser");
     this._router.navigateByUrl('/login');
   }
 }

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { LoggedUserService } from '../../../shared/services/logged-user.service';
 import { NotesService } from '../../../shared/services/notes.service';
 
 @Component({
@@ -19,7 +18,6 @@ export class NotesComponent {
   currentUserNotes: any;
   loggedUser: any;
   constructor(
-    private _loggedUser: LoggedUserService,
     private _notesService: NotesService
   ) {
     this.noteBtn = 'Save';
@@ -43,8 +41,6 @@ export class NotesComponent {
   //Save Note
   saveNote() {
     if (!this.note.invalid) {
-      const loggedUserString = localStorage.getItem('LoggedUser');
-      const loggedUser = loggedUserString ? JSON.parse(loggedUserString) : null;
       this._notesService.createNote(this.note.value).subscribe((note) => {
         this.userNotes.push(note);
         this.note.reset();
@@ -55,7 +51,7 @@ export class NotesComponent {
   delNote(index: any) {
     this._notesService
       .delNote(this.userNotes[index]['id'])
-      .subscribe((notes) => {});
+      .subscribe();
     this.userNotes.splice(index, 1);
   }
 

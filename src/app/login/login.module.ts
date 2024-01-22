@@ -6,7 +6,6 @@ import { AppRoutingModule } from '../app-routing.module';
 import { InputComponent } from '../shared/component/input/input.component';
 import { MaterialModule } from '../shared/material/material.module';
 import { HttpService } from '../shared/services/http.service';
-import { LoggedUserService } from '../shared/services/logged-user.service';
 import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
@@ -19,6 +18,6 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     AppRoutingModule,
   ],
-  providers: [HttpService, LoggedUserService],
+  providers: [HttpService],
 })
 export class LoginModule {}
