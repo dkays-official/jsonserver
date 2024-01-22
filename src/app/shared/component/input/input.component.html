@@ -1,6 +1,10 @@
-    <mat-form-field [formGroup]="formGroup">
-        <mat-label>{{ placeholder }} : </mat-label>
-        <input matInput [placeholder]="placeholder" [id]="inputId" [formControlName]="control" type= {{type}}>
-      </mat-form-field>
-
-      
+<mat-form-field [formGroup]="formGroup">
+  <mat-label>{{ placeholder }} : </mat-label>
+  <input
+    matInput
+    [placeholder]="placeholder"
+    [id]="inputId"
+    [formControlName]="control"
+    type="{{ type }}"
+  />
+</mat-form-field>

@@ -7,15 +7,16 @@ import { SignupModule } from './signup/signup.module';
 import { NotesModule } from './notes/notes.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './shared/material/material.module';
-import { HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withInterceptors,
+} from '@angular/common/http';
 import { NotfoundComponent } from './shared/component/notfound/notfound.component';
 import { httpheaderInterceptor } from './shared/services/httpheader.interceptor';
 import { errorhandlerInterceptor } from './shared/services/errorhandler.interceptor';
 @NgModule({
-  declarations: [
-    AppComponent,
-    NotfoundComponent,
-  ],
+  declarations: [AppComponent, NotfoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -24,9 +25,13 @@ import { errorhandlerInterceptor } from './shared/services/errorhandler.intercep
     HttpClientModule,
     NotesModule,
     LoginModule,
-    SignupModule
+    SignupModule,
   ],
-  providers: [provideHttpClient(withInterceptors([httpheaderInterceptor, errorhandlerInterceptor]))],
-  bootstrap: [AppComponent]
+  providers: [
+    provideHttpClient(
+      withInterceptors([httpheaderInterceptor, errorhandlerInterceptor])
+    ),
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

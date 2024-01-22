@@ -8,19 +8,15 @@ import { HttpService } from '../shared/services/http.service';
 import { AppRoutingModule } from '../app-routing.module';
 import { InputComponent } from '../shared/component/input/input.component';
 
-
-
 @NgModule({
-  declarations: [
-    SignupComponent
-  ],
+  declarations: [SignupComponent],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers:[HttpService]
+  providers: [HttpService],
 })
-export class SignupModule { }
+export class SignupModule {}

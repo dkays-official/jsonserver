@@ -8,15 +8,15 @@ import { authGuard } from './shared/auth.guard';
 import { unauthGuard } from './shared/services/unauth.guard';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent, canActivate: [unauthGuard] },
-  {path: 'login', component: LoginComponent, canActivate: [unauthGuard]},
-  {path: 'signup', component: SignupComponent, canActivate: [unauthGuard]},
-  {path: 'mynotes', component: NotesComponent, canActivate: [authGuard]},
-  {path: '**', component: NotfoundComponent},
+  { path: '', component: LoginComponent, canActivate: [unauthGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [unauthGuard] },
+  { path: 'signup', component: SignupComponent, canActivate: [unauthGuard] },
+  { path: 'mynotes', component: NotesComponent, canActivate: [authGuard] },
+  { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

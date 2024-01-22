@@ -5,13 +5,15 @@ import { LoggedUserService } from '../../../shared/services/logged-user.service'
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  constructor(private _localStorage : LoggedUserService, private _router : Router){}
-  logout(){
-    this._localStorage.removeLoggedUser()
-    this._router.navigateByUrl('/login')
-  }  
-
+  constructor(
+    private _localStorage: LoggedUserService,
+    private _router: Router
+  ) {}
+  logout() {
+    this._localStorage.removeLoggedUser();
+    this._router.navigateByUrl('/login');
+  }
 }

@@ -5,13 +5,13 @@ body {
   margin: 0;
   font-family: "Roboto Slab", serif;
 }
-.delBtn{
+.delBtn {
   border: none;
   background: white;
   cursor: pointer;
   color: #ff0000;
 }
-.editBtn{
+.editBtn {
   border: none;
   background: white;
   cursor: pointer;
@@ -157,10 +157,9 @@ body {
   cursor: pointer;
 }
 
-.note-container{
+.note-container {
   max-width: 1170px;
   width: 100%;
   padding: 10px;
   margin: 0 auto;
-
 }

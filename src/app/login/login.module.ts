@@ -9,20 +9,16 @@ import { HttpService } from '../shared/services/http.service';
 import { LoggedUserService } from '../shared/services/logged-user.service';
 import { LoginComponent } from './components/login/login.component';
 
-
 @NgModule({
-  declarations: [
-    LoginComponent,
-    InputComponent
-  ],
+  declarations: [LoginComponent, InputComponent],
   imports: [
     CommonModule,
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [HttpService, LoggedUserService]
+  providers: [HttpService, LoggedUserService],
 })
-export class LoginModule { }
+export class LoginModule {}
